@@ -212,7 +212,7 @@ button.switch:hover {
 }
 
 .showing {
-    visibility: 1;
+    visibility: visible;
 }
 
 .hidden {
