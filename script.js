@@ -37,13 +37,19 @@
     //needs fixing
     for (const section of sections) {
         section.addEventListener('mouseover', function() {
-            console.log('hovering');
+            // console.log('hovering');
             section.style.backgroundImage = 'none';
-            for (const text of sectionText) {
-                text.className = 'showing';
-            }    
+            section.querySelector('nav').className = 'showing';  
         })
-        //return back to before hovering  
+        //return back to default hovering  
+        section.addEventListener('mouseout', function() {
+            // console.log('not');
+            section.style.backgroundImage = "url('images/egg_top.png')";
+            section.querySelector('nav').className = 'hidden';
+            if (mode === 'egg') {
+                section.style.backgroundImage = "url('images/coffee_top.png')";
+            }
+        })
     }
 
 
