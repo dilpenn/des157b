@@ -1,0 +1,24 @@
+section {
+    width: 100vw;
+    height: 100vh;
+    max-width: 1200px;
+    max-height: 750px;
+    position: relative;
+    border: 5px solid red;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-bottom: 62.5%; */
+}
+
+img {
+    width: 100%;
+    max-width: 1200px;
+    max-he
+}
+
+video {
+    position: absolute;
+    top: 20.83%;
+    left: 3.21%;
+    width: 65.1%;
+}
