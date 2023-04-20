@@ -9,15 +9,21 @@
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
     
+    <link rel="preload" href="media/airport-f.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="media/turbines-f.mp4" as="video" type="video/mp4">
+
     <title>Blockbuster Video</title>
 </head>
 <body>
-    <section id="myVideo">
-        <img src="images/camcorder.png" alt="camcorder">
-        <video>
-            <source src="media/clouds.webm" type="video/webm">
+    <section>
+        <video id="myVideo" controls muted autoplay playsinline>
+            <!-- <source src="media/clouds.webm" type="video/webm"> -->
             <source src="media/clouds.mp4" type="video/mp4">
         </video>
+        
+        <img src="images/camcorderbody.png" alt="camcorder">
+
+        <p id="text">here is some text</p>
     </section>
     
 </body>
