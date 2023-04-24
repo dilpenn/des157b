@@ -30,9 +30,41 @@ video {
     border: 1px black solid;
 }
 
-#text {
+#load {
     position: absolute;
     top: 50%;
-    left: 80%;
+    left: 50%;
+    font-size: 4em;
+    color: antiquewhite;
+    transform: translate(-50%, -50%); /* moves anchor point of graphic to center*/
+    animation: pulse 2s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(1.5);
+    }
+}
+
+#text {
+    position: absolute;
     font-size: 2em;
+    padding: 0.25em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.49);
+    top: 35%;
+    right: 0;
+    width: 20%;
+}
+
+#cake {
+    font-size: 1em;
 }
