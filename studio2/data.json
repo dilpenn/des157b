@@ -1,0 +1,99 @@
+[
+    {
+        "day": 1,
+        "time": "3:00pm",
+        "dessert": "dark chocolate",
+        "amount": 2
+    },
+
+    {
+        "day": 1,
+        "time": "6:10pm",
+        "dessert": "dark chocolate",
+        "amount": 1
+    },
+
+    {
+        "day": 2,
+        "time": "12:10am",
+        "dessert": "dark chocolate",
+        "amount": 1
+    },
+
+    {
+        "day": 2,
+        "time": "12:25am",
+        "dessert": "chocolate bar",
+        "amount": 1
+    },
+
+    {
+        "day": 2,
+        "time": "3:37pm",
+        "dessert": "boba",
+        "amount": 1
+    },
+
+    {
+        "day": 2,
+        "time": "8:42pm",
+        "dessert": "brownie",
+        "amount": 1
+    },
+
+    {
+        "day": 2,
+        "time": "9:00pm",
+        "dessert": "baklava",
+        "amount": 1
+    },
+
+    {
+        "day": 2,
+        "time": "9:15pm",
+        "dessert": "brownie",
+        "amount": 2
+    },
+
+    {
+        "day": 2,
+        "time": "9:30pm",
+        "dessert": "Oreo",
+        "amount": 1
+    },
+
+    {
+        "day": 2,
+        "time": "11:15pm",
+        "dessert": "Oreo",
+        "amount": 1
+    },
+
+    {
+        "day": 3,
+        "time": "1:30am",
+        "dessert": "brownie",
+        "amount": 1
+    },
+
+    {
+        "day": 3,
+        "time": "11:45am",
+        "dessert": "dark Ferrero Rocher",
+        "amount": 1
+    },
+
+    {
+        "day": 3,
+        "time": "2:40pm",
+        "dessert": "milk Ferrero Rocher",
+        "amount": 1
+    },
+
+    {
+        "day": 3,
+        "time": "9:45pm",
+        "dessert": "baklava",
+        "amount": 2
+    }
+]

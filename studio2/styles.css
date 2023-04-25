@@ -1,0 +1,64 @@
+body {
+    /* margin: auto; */
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.25em;
+}
+#time {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+#timeline {
+    padding-top: 50px;
+}
+
+#line {
+    position: relative;
+    height: 5px;
+    width: 75%;
+    background: black;
+    border-radius: 5px;
+    margin: auto; 
+}
+
+#line .filled_dot {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: black;
+    border-radius: 50%;
+    top: -8px;
+}
+
+#point1 {
+    left: -1%;
+}
+
+#point2 {
+    left: 33%;
+}
+
+#point3 {
+    left: 66%;
+}
+
+#point4 {
+    left: 99%;
+}
+
+#labels {
+    display: flex;
+    width: 75%;
+    margin: auto;
+    justify-content: space-around;
+}
