@@ -11,28 +11,44 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    
     <title>Check Yourself</title>
 </head>
 
 <body>
-    <h1>Eid Dessert Log</h1>
-    <img src="images/amber.PNG" width="200px">
-    <p id="description">description</p>
-    <p id="time">00:00pm</p>
+    <div id="decorations">
+        <!-- <img src="images/star1.svg"> -->
+        <img src="images/lantern.svg">
+        <img src="images/crescent.svg">
+        <img src="images/star2.svg">
+        <div id="empty"></div>
+        <img src="images/star3.svg">
+        <img src="images/lantern.svg">
+        <img src="images/star4.svg">
+    </div>
+    
+    <main>
+        <h1>Eid Dessert Log</h1>
+        <img src="images/amber.PNG" width="200px">
+        <p id="description">description</p>
+        <p id="time">00:00pm</p>
 
-    <section id="timeline">
-        <div id="line">
-            <div class="filled_dot" id="point1"></div>
-            <div class="filled_dot" id="point2"></div>
-            <div class="filled_dot" id="point3"></div>
-            <div class="filled_dot" id="point4"></div>
-        </div>
+        <section id="timeline">
+            <div id="line">
+                <div class="filled_dot" id="point1"></div>
+                <div class="filled_dot" id="point2"></div>
+                <div class="filled_dot" id="point3"></div>
+                <div class="filled_dot" id="point4"></div>
+            </div>
 
-        <div id="labels">
-            <p>Day 1</p>
-            <p>Day 2</p>
-            <p>Day 3</p>
-        </div>
-    </section>
+            <div id="labels">
+                <p>Day 1</p>
+                <p>Day 2</p>
+                <p>Day 3</p>
+            </div>
+        </section> 
+    </main>
+    
 </body>
 </html>

@@ -1,21 +1,46 @@
 body {
     /* margin: auto; */
-    text-align: center;
     font-family: 'Philosopher', sans-serif;
+    background: linear-gradient(180deg, #00A7A3 0%, #005466 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#decorations {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#decorations div {
+    width: 35%;
+}
+
+main {
+    width: 100vw;
+    text-align: center;
+    /* margin: auto; */
+    position: absolute;
+    top: 0;
 }
 
 h1 {
     font-weight: 700;
-    font-size: 3em;
+    font-size: 3.5em;
+    text-shadow: -2px 2px 10px #EDD084;
+    /* text-shadow: 0px 0px 10px black; */
+    /* color: #EDD084; */
+    /* color: #001752; */
 }
 
 p {
     font-size: 1.25em;
 }
+
 #time {
     font-family: 'Orbitron', sans-serif;
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
 
 #timeline {
@@ -26,7 +51,7 @@ p {
     position: relative;
     height: 5px;
     width: 75%;
-    background: black;
+    background: #EDD084;
     border-radius: 5px;
     margin: auto; 
 }
@@ -35,7 +60,7 @@ p {
     position: absolute;
     height: 20px;
     width: 20px;
-    background: black;
+    background: #EDD084;
     border-radius: 50%;
     top: -8px;
 }
@@ -61,4 +86,5 @@ p {
     width: 75%;
     margin: auto;
     justify-content: space-around;
+    color: #EDD084;
 }

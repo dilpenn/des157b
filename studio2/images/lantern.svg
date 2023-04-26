@@ -1,0 +1,13 @@
+<svg width="41" height="278" viewBox="0 0 41 278" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="20.25" y1="207" x2="20.25" stroke="#EDD084" stroke-opacity="0.9" stroke-width="1.5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40.0091 224H0C2.05096 214.843 10.2287 208 20.0045 208C29.7804 208 37.9581 214.843 40.0091 224Z" fill="#EDD084" fill-opacity="0.9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5136 208.803H16.5045C16.8639 207.199 18.2965 206 20.0091 206C21.7217 206 23.1543 207.199 23.5136 208.803Z" fill="#EDD084" fill-opacity="0.9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40.0091 260H0C2.05097 269.157 10.2286 276 20.0045 276C29.7804 276 37.9581 269.157 40.0091 260Z" fill="#EDD084" fill-opacity="0.9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5136 275.197H16.5045C16.8639 276.801 18.2965 278 20.0091 278C21.7217 278 23.1543 276.801 23.5136 275.197Z" fill="#EDD084" fill-opacity="0.9"/>
+<line x1="1" y1="224" x2="1" y2="260" stroke="#EDD084" stroke-opacity="0.9" stroke-width="2"/>
+<line x1="38" y1="227.75" x2="1" y2="227.75" stroke="#EDD084" stroke-opacity="0.9" stroke-width="1.5"/>
+<line x1="38" y1="256.75" x2="1" y2="256.75" stroke="#EDD084" stroke-opacity="0.9" stroke-width="1.5"/>
+<line x1="11" y1="224" x2="11" y2="260" stroke="#EDD084" stroke-opacity="0.9" stroke-width="2"/>
+<line y1="-1" x2="36" y2="-1" transform="matrix(0 1 1 0 40 224)" stroke="#EDD084" stroke-opacity="0.9" stroke-width="2"/>
+<line y1="-1" x2="36" y2="-1" transform="matrix(0 1 1 0 30 224)" stroke="#EDD084" stroke-opacity="0.9" stroke-width="2"/>
+</svg>
