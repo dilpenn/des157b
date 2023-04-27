@@ -1,0 +1,30 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 3% 25%;
+    line-height: 1.5em;
+    font-size: 18px;
+}
+
+section {
+    margin: 25px 0;
+}
+
+h1, h2 {
+    font-family: 'Gloock', serif;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.2em;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-transform: lowercase;
+}
+
+/* #gifs {
+    display: flex;
+    justify-content: space-evenly;
+} */
