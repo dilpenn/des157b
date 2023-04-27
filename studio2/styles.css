@@ -1,7 +1,7 @@
 body {
     /* margin: auto; */
     font-family: 'Philosopher', sans-serif;
-    background: linear-gradient(180deg, #00A7A3 0%, #005466 100%);
+    background: linear-gradient(180deg, #007B79 0%, #003261 100%);
     background-repeat: no-repeat;
     height: 100vh;
 }
@@ -27,9 +27,9 @@ main {
 h1 {
     font-weight: 700;
     font-size: 3.5em;
-    text-shadow: -2px 2px 10px #EDD084;
+    /* text-shadow: -2px 2px 10px #EDD084; */
     /* text-shadow: 0px 0px 10px black; */
-    /* color: #EDD084; */
+    color: #EDD084;
     /* color: #001752; */
 }
 
