@@ -1,7 +1,7 @@
 body {
     /* margin: auto; */
     font-family: 'Philosopher', sans-serif;
-    background: linear-gradient(180deg, #008582 3.65%, #001B61 100%);
+    background: linear-gradient(180deg, #00A7A3 0%, #008582 14.06%, #001B61 100%);
     background-repeat: no-repeat;
     height: 100vh;
     color: #EDD084;
@@ -14,7 +14,7 @@ body {
     justify-content: space-around;
 }
 
-#decorations div {
+#decorations #empty {
     width: 35%;
 }
 
@@ -29,13 +29,26 @@ main {
 h1 {
     font-weight: 700;
     font-size: 3.5em;
-    /* text-shadow: -2px 2px 10px #EDD084; */
-    /* text-shadow: 0px 0px 10px black; */
-    /* color: #001752; */
+    text-shadow: 1px 1px 10px #008582;
+}
+
+#img_container {
+    height: 225px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#dessert_img {
+    max-width: 450px;
 }
 
 p {
     font-size: 1.25em;
+}
+
+#description {
+    font-size: 1.75em;
 }
 
 #time {
@@ -80,6 +93,84 @@ p {
 
 #point4 {
     left: 99%;
+}
+
+#line .empty_dot {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: #001B61;
+    border-radius: 50%;
+    border: 2px solid #EDD084;
+    top: -6px;
+}
+
+#line .empty_dot:hover {
+    background: #EDD084;
+    cursor: pointer;
+}
+
+#data1 {
+    left: 21%;
+}
+
+#data2 {
+    left: 25%;
+}
+
+#data3 {
+    left: 34.2%; 
+    /* accurate value 33.6 */
+}
+
+#data4 {
+    left: 35.6%;
+    /* accurate value 34 */
+}
+
+#data5 {
+    left: 55%;
+}
+
+#data6 {
+    left: 60%;
+    /* accurate value 62.15 */
+}
+
+#data7 {
+    left: 61%;
+    /* accurate value 62.5 */
+}
+
+#data8 {
+    left: 61.8%;
+    /* accurate value 62.8 */
+}
+
+#data9 {
+    left: 62.6%;
+    /* accurate value 63.3 */
+}
+
+#data10 {
+    left: 64.7%;
+    /* accurate value 65.6 */
+}
+
+#data11 {
+    left: 68.75%;
+}
+
+#data12 {
+    left: 83%;
+}
+
+#data13 {
+    left: 87%;
+}
+
+#data14 {
+    left: 91.3%;
 }
 
 #labels {
