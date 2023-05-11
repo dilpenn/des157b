@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!-- link to AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- stylesheet -->
+    <link href="styles.css" rel="stylesheet">
+     <!-- link to AOS JS -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- script -->
+    <script src="script.js" defer></script>
+
+    <title>Library Liberty</title>
+</head>
+
+<body>
+    <div id="viewport"> <!--only visible portion-->
+        <div id="fullview"> <!--full rectangle of scenes-->
+            <div data-aos="fade-left" class="square" id="square0a"></div>
+            <div data-aos="fade-right" class="square" id="square0b"></div>
+
+            <div id="screen1">
+                <div data-aos="fade-up" class="square" id="square1a"></div>
+                <div data-aos="fade-down" class="square" id="square1b"></div>
+            </div>
+
+            <div id="screen2">
+                <div class="square" id="square2a"></div>
+            </div>
+           
+        </div> 
+    </div>
+    
+</body>
+</html>
