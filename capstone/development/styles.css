@@ -24,6 +24,18 @@ h2 {
     text-transform: lowercase;
 }
 
+img {
+    max-width: 100%;
+}
+
+#imgs {    
+    display: flex;
+    justify-content: space-around;
+    /* flex: 1 1 0; */
+    flex-shrink: 1;
+
+}
+
 /* #gifs {
     display: flex;
     justify-content: space-evenly;
