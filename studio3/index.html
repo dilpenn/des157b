@@ -8,7 +8,9 @@
     <!-- normalize -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <!-- link to AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <!-- Scrollmagic Library -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <!-- stylesheet -->
     <link href="styles.css" rel="stylesheet">
      <!-- link to AOS JS -->
@@ -22,12 +24,14 @@
 <body>
     <div id="viewport"> <!--only visible portion-->
         <div id="fullview"> <!--full rectangle of scenes-->
-            <div data-aos="fade-left" class="square" id="square0a"></div>
-            <div data-aos="fade-right" class="square" id="square0b"></div>
+            <p id="intro">scroll to begin</p>
 
             <div id="screen1">
-                <div data-aos="fade-up" class="square" id="square1a"></div>
-                <div data-aos="fade-down" class="square" id="square1b"></div>
+                <img src="images/taxi.png" class="item" id="taxi" alt="taxi graphic">
+                <img src="images/bus.png" class="item" id="bus" alt="bus graphic">
+
+                <!-- <div data-aos="fade-up" class="square" id="square1a"></div>
+                <div data-aos="fade-down" class="square" id="square1b"></div> -->
             </div>
 
             <div id="screen2">

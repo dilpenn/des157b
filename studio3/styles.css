@@ -13,6 +13,11 @@
     /* position: relative; */
 }
 
+#intro {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
 #screen1 {
     height: 100vh;
     width: 100vw;
@@ -35,19 +40,7 @@
     position: absolute;
 }
 
-#square0a {
-    background-color: rgb(255, 170, 0);
-    top: 50%;
-    right: 30%;
-}
-
-#square0b {
-    background-color: rgb(198, 82, 142);
-    top: 50%;
-    left: 30%;
-}
-
-#square1a {
+/* #square1a {
     background-color: aqua;
     top: 40%;
     right: 30%;
@@ -57,7 +50,7 @@
     background-color: blueviolet;
     top: 60%;
     left: 30%;
-}
+} */
 
 #square2a {
     background-color: rgb(165, 44, 178);
@@ -65,3 +58,16 @@
     left: 30%;
 }
 
+.item {
+    position: absolute;
+}
+
+#taxi {
+    top: 15%;
+    right: 10%;
+}
+
+#bus {
+    bottom: 15%;
+    left: 10%;
+}
