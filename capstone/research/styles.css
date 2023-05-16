@@ -29,3 +29,11 @@ section {
     justify-content: space-evenly;
     width: 100%;
 }
+
+.smalltext {
+    font-size: 14px;
+}
+
+.full_img {
+    width: 100%;
+}
