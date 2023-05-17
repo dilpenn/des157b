@@ -71,3 +71,8 @@
     bottom: 15%;
     left: 10%;
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
