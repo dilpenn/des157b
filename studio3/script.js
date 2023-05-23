@@ -14,17 +14,17 @@ const controller = new ScrollMagic.Controller();
 const t1 = new TimelineMax();
 
 // timeline sequence
-t1.to('#fullview', 1, {xPercent: -33.33}); //to(selector, animation duration in sec., {animation property})
-t1.from(item[0], 1, {right: 0}); //taxi
+t1.to('#fullview', 2, {xPercent: -33.33}); //to(selector, animation duration in sec., {animation property})
+t1.from(item[0], 2, {right: 0}); //taxi
 
-t1.to('#fullview', 1, {xPercent: -33.33}); 
-t1.from(item[1], 1, {left: 0}); //bus
+t1.to('#fullview', 2, {xPercent: -33.33}); 
+t1.from(item[1], 2, {left: 0}); //bus
 
-t1.to('#fullview', 1, {xPercent: -66.66}); 
-t1.from(item[2], 1, {right: 0}); //mouse
+t1.to('#fullview', 2, {xPercent: -66.66}); 
+t1.from(item[2], 2.5, {right: 0}); //mouse
 
-t1.to('#fullview', 1, {xPercent: -66.66}); 
-t1.from(item[3], 1.5, {right: 0}); //cheese
+t1.to('#fullview', 2, {xPercent: -66.66}); 
+t1.from(item[3], 2, {right: 0}); //cheese
 
 
 //build scene
