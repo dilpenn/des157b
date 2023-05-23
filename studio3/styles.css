@@ -42,45 +42,31 @@
     left: 200vw;
 }
 
-.square {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-}
-
-/* #square1a {
-    background-color: aqua;
-    top: 40%;
-    right: 30%;
-}
-
-#square1b {
-    background-color: blueviolet;
-    top: 60%;
-    left: 30%;
-} */
-
-#square2a {
-    background-color: rgb(165, 44, 178);
-    top: 60%;
-    left: 30%;
-}
-
 .item {
     position: absolute;
 }
 
 #taxi {
     top: 15%;
-    right: 10%;
+    right: 90%;
 }
 
 #bus {
     bottom: 15%;
-    left: 10%;
+    left: 90%;
+}
+
+#mouse {
+    bottom: 40%;
+    right: 90%;
+}
+
+#cheese {
+    bottom: 40%;
+    right: 90%;
 }
 
 footer {
-    position: absolute;
+    position: sticky;
     bottom: 0;
 }
