@@ -15,16 +15,12 @@ const t1 = new TimelineMax();
 
 // timeline sequence
 t1.to('#fullview', 2, {xPercent: -33.33}); //to(selector, animation duration in sec., {animation property})
-t1.from(item[0], 2, {right: 0}); //taxi
-
-t1.to('#fullview', 2, {xPercent: -33.33}); 
-t1.from(item[1], 2, {left: 0}); //bus
+t1.from(item[0], 2, {right: 0}, 'first'); //taxi
+t1.from(item[1], 2, {left: 0}, 'first'); //bus
 
 t1.to('#fullview', 2, {xPercent: -66.66}); 
-t1.from(item[2], 2.5, {right: 0}); //mouse
-
-t1.to('#fullview', 2, {xPercent: -66.66}); 
-t1.from(item[3], 2, {right: 0}); //cheese
+t1.from(item[2], 3, {right: -10, delay: 1}, 'second'); //mouse
+t1.from(item[3], 2, {right: 0}, 'second'); //cheese
 
 
 //build scene
@@ -35,9 +31,9 @@ const scene = new ScrollMagic.Scene({
 })
     .setPin('#viewport')
     .setTween(t1)
-    .addIndicators({
-        colorTrigger: "blue",
-        colorStart: "green",
-        colorEnd: "red",
-    })
+    // .addIndicators({
+    //     colorTrigger: "blue",
+    //     colorStart: "green",
+    //     colorEnd: "red",
+    // })
     .addTo(controller);

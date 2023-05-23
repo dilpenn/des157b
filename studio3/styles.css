@@ -74,3 +74,7 @@ footer {
     position: sticky;
     bottom: 0;
 }
+
+footer p {
+    margin: 0;
+}
