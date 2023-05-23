@@ -2,8 +2,8 @@
     height: 100vh;
     width: 100vw;
     /* background-color: black; */
-    overflow-x: scroll;
-    position: relative;
+    overflow: hidden;
+    /* position: relative; */
 }
 
 #fullview {
@@ -13,11 +13,19 @@
     /* position: relative; */
 }
 
+.section {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    float: left;
+}
+
 #intro {
     position: absolute;
     top: 50%;
     left: 40%;
 }
+
 #screen1 {
     height: 100vh;
     width: 100vw;
