@@ -39,6 +39,9 @@ t1.from(item[9], 2, {left: 0}, 'sixth'); //doxie
 t1.to('#fullview', 2, {xPercent: -77.77});
 t1.from(item[10], 1, {bottom: 0}, 'seventh'); //grad
 
+t1.to('#fullview', 2, {xPercent: -88.88});
+// t1.from(item[10], 1, {bottom: 0}, 'seventh'); //grad
+
 
 //build scene
 const scene = new ScrollMagic.Scene({

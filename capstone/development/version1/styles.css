@@ -79,10 +79,10 @@ body {
     left: 800vw;
 }
 
-#screen9 {
+/* #screen9 {
     background-color: rgb(160, 136, 123);
     left: 900vw;
-}
+} */
 
 .item {
     position: absolute;
@@ -142,6 +142,19 @@ body {
 #grad {
     bottom: 90%;
     right: 50%;
+}
+
+button {
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    transform-origin: 50% 50%; 
+    top: 50%;
+    left: 50%;
 }
 
 footer {
