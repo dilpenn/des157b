@@ -1,0 +1,197 @@
+body {
+    font-family: 'Pangolin', cursive;;
+}
+
+
+/* showing and hiding elements */
+.showing{
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* PARALLAX STYLING */
+#viewport {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: black; */
+    overflow: hidden;
+    /* position: relative; */
+}
+
+#fullview {
+    height: 100vh;
+    width: 900vw;
+    background-color: blanchedalmond;
+    /* position: relative; */
+}
+
+.section {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    float: left;
+}
+
+.section {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+#bike {
+    position: fixed;
+    bottom: 1%;
+}
+
+#intro {
+    text-align: center;
+    margin-top: 20%;
+}
+
+button {
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#note {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+#screen1 {
+    background-color: rgb(137, 162, 137);
+    left: 100vw;
+}
+
+#screen2 {
+    background-color: rgb(123, 159, 160);
+    left: 200vw;
+}
+
+#screen3 {
+    background-color: rgb(123, 135, 160);
+    left: 300vw;
+}
+
+#screen4 {
+    background-color: rgb(123, 125, 160);
+    left: 400vw;
+}
+
+#screen5 {
+    background-color: rgb(146, 123, 160);
+    left: 500vw;
+}
+
+#screen6 {
+    background-color: rgb(160, 123, 157);
+    left: 600vw;
+}
+
+#screen7 {
+    background-color: rgb(160, 123, 152);
+    left: 700vw;
+}
+#screen8 {
+    background-color: rgb(160, 123, 123);
+    left: 800vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #screen9 {
+    background-color: rgb(160, 136, 123);
+    left: 900vw;
+} */
+
+.item {
+    position: absolute;
+}
+
+/* values are END positions (start value in JS */
+#dorm {
+    top: 15%;
+    right: 90%;
+}
+
+#turkey {
+    bottom: 15%;
+    left: 100%;
+}
+
+#egghead {
+    top: 1%;
+    right: 90%;
+}
+
+#unitrans {
+    bottom: 10%;
+    left: 90%;
+}
+
+#squirrel {
+    bottom: 30%;
+    right: 110%;
+}
+
+#ducks {
+    bottom: 30%;
+    right: 70%;
+}
+
+#cow {
+    bottom: 60%;
+    right: 70%;
+}
+
+#tractor {
+    bottom: 20%;
+    left: 100%;
+}
+
+#farmers_market {
+    top: 10%;
+    right: 90%;
+}
+
+#doxie {
+    bottom: 40%;
+    right: -10%;
+}
+
+#grad {
+    bottom: 90%;
+    right: 50%;
+}
+
+#screen8 #note {
+    position:unset;
+}
+
+
+/* FORM STYLING */
+#form_screen {
+    position: absolute;
+    top: 0;
+}
+
+
+footer {
+    position: sticky;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
