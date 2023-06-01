@@ -1,0 +1,16 @@
+[{
+      "description": "I like the cows",
+      "status": "current student",
+      "year": 2024,
+      "name": "Betty"
+    }, {
+        "description": "squirrel watching",
+        "status": "current student",
+        "year": 2023,
+        "name": "anonymous duck"
+    }, {
+        "description": "sunsets from hutch parking",
+        "status": "alumni",
+        "year": 2022,
+        "name": "anonymous squirrel"
+    }]
