@@ -16,6 +16,40 @@ body {
     padding: 1%;
 }
 
+.intro {
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 1;
+    background-color: white;
+    border: solid black;
+    border-radius: 12px;
+    padding: 1%;
+}
+
+.placeholder {
+    background-color: gray;
+}
+
+#seal {
+    height: 150px;
+    width: 150px;
+    border-radius: 200px;
+}
+
+#location {
+    height: 120px;
+    width: 200px;
+}
+
+#slice {
+    height: 120px;
+    width: 75px;
+}
+
 #user_test ol {
     text-align: left;
 }

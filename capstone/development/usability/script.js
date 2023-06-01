@@ -117,6 +117,9 @@
     const closeOverlay = document.querySelector('#continue');
     const userTest = document.querySelector('#user_test');
 
+    const nextButton = document.querySelectorAll('.next');
+    const introOverlay = document.querySelectorAll('.intro');
+
     const myForm = document.querySelector('#my_form');
     const submit = document.querySelector('#submit');
 
@@ -144,7 +147,31 @@
     // when "Let's go!" is clicked, close user test overlay
     closeOverlay.addEventListener('mousedown', function() {
         hideElement(userTest);
+        showElement(introOverlay[0]);
     });
+
+    nextButton[0].addEventListener('mousedown', function() {
+            hideElement(introOverlay[0]);
+            showElement(introOverlay[1]);
+    });
+
+    nextButton[1].addEventListener('mousedown', function() {
+        hideElement(introOverlay[1]);
+        showElement(introOverlay[2]);
+    });
+
+    nextButton[2].addEventListener('mousedown', function() {
+        hideElement(introOverlay[2]);
+        showElement(introOverlay[3]);
+    });
+
+    nextButton[3].addEventListener('mousedown', function() {
+        hideElement(introOverlay[3]);
+    });
+
+    // for (let i=1; i < introOverlay.length; i++) {
+
+    // }
 
     // show notes & hide form when user submits form
     myForm.addEventListener('submit', function(event) {
