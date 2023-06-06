@@ -22,6 +22,7 @@
     const t1 = new TimelineMax();
 
     // timeline sequence
+
     t1.to('#fullview', 2, {xPercent: -11.11}); //to(selector, animation duration in sec., {animation property})
     t1.from(item[0], 4, {right: 0}, 'first'); //dorm
     t1.from(item[1], 2, {left: 0}, 'first'); //turkey
@@ -32,30 +33,34 @@
 
     t1.to('#fullview', 2, {xPercent: -33.33}); 
     t1.from(item[4], 3, {right: 200}, 'third'); //squirrel
-    t1.from(item[5], 5, {right: 0}, 'third'); //ducks
+    t1.from(item[5], 5, {right: 40}, 'third'); //duck
+    t1.from(item[6], 6, {right: 20}, 'third'); //duckling1
+    t1.from(item[7], 7, {right: 0}, 'third'); //duckling2
 
     t1.to('#fullview', 2, {xPercent: -44.44}); 
-    t1.from(item[6], 5, {right: 0}, 'fourth'); //cow
-    t1.from(item[7], 3, {left: -10}, 'fourth'); //tractor
+    t1.from(item[8], 5, {right: 0}, 'fourth'); //cow
+    t1.from(item[9], 3, {left: -10}, 'fourth'); //tractor
 
     t1.to('#fullview', 2, {xPercent: -55.55}); 
-    t1.from(item[8], 4, {right: 0}, 'fifth'); //farmers market
+    t1.from(item[10], 4, {right: 0}, 'fifth'); //farmers market
 
     t1.to('#fullview', 2, {xPercent: -66.66});
-    t1.from(item[9], 2, {left: 0}, 'sixth'); //doxie
+    t1.from(item[11], 3, {left: 0}, 'sixth'); //doxie
 
     t1.to('#fullview', 2, {xPercent: -77.77});
-    t1.from(item[10], 1, {bottom: 0}, 'seventh'); //grad
+    t1.from(item[12], 3, {bottom: 0}, 'seventh'); //grad
 
     t1.to('#fullview', 2, {xPercent: -88.88});
     // t1.from(item[10], 1, {bottom: 0}, 'seventh'); 
 
 
     //build scene
+    const bike = document.querySelector('#bike');
+
     const scene = new ScrollMagic.Scene({
         triggerElement: '#viewport',  //element that triggers animation
         triggerHook: "onLeave",   //trigger animation on start, center, or leave of scene
-        duration: "400%", //add 100% for every scene
+        duration: "600%", //add 100% for every scene
     })
         .setPin('#viewport')
         .setTween(t1)
@@ -66,10 +71,17 @@
         // })
         .addTo(controller);
 
+    // var bikescene = new ScrollMagic.Scene({triggerElement: "#bike"})
+    //     .setPin("#bike")
+    //     .addIndicators({name: "2 (duration: 800)"}) // add indicators (requires plugin)
+    //     .addTo(controller);
+
 
 
     // -- BACK4APP --
     const notesDisplay = document.querySelector('#notes_display');
+    const noteForm = document.querySelector('#form_screen');
+    const inputs = document.querySelectorAll("#form_screen input:not([type=submit])");
 
     async function displayNotes() {
         const notes = Parse.Object.extend('Notes');
@@ -105,13 +117,42 @@
     }
     displayNotes();
 
+    noteForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        addNote();
+    });
+
+    async function addNote() {
+        const newNote = {};
+
+        for (let i=0; i<inputs.length; i++) {
+            let key = inputs[i].getAttribute('name');
+            let value = inputs[i].value;
+            newNote[key] = value;
+        }
+        console.log(newNote);
+        
+        if(newNote.description != "" && newNote.status != "" && newNote.year != "" && newNote.name != "") {
+            const newNoteData = new Parse.Object('Notes');
+            newNoteData.set('description', newNote.description);
+            newNoteData.set('status', newNote.status);
+            newNoteData.set('year', newNote.year);
+            newNoteData.set('name', newNote.name);
+        } else {
+            hideElement(noteForm);
+            showElement(notesDisplay);
+        }
+    }
+
+    
+
 
 
     // -- BUTTONS --
     const startOver = document.querySelector('#start_over');
     const leaveNote = document.querySelectorAll('#note');
     console.log(leaveNote);
-    const noteForm = document.querySelector('#form_screen');
+    
     const parallax = document.querySelector('#viewport');
     
     const closeOverlay = document.querySelector('#continue');
@@ -119,10 +160,11 @@
 
     const nextButton = document.querySelectorAll('.next');
     const introOverlay = document.querySelectorAll('.intro');
+    const exit = document.querySelectorAll('.exit');
 
     const myForm = document.querySelector('#my_form');
-    const submit = document.querySelector('#submit');
-
+    // const submit = document.querySelector('#submit');
+    
 
     // when "Start Over" is clicked, scroll back to the beginning
     startOver.addEventListener('mousedown', scrollToTop);
@@ -169,13 +211,20 @@
 
     // }
 
+    // close overlay that exit button corresponds to
+    for (let i=0; i < introOverlay.length; i++) {
+        exit[i].addEventListener('mousedown', function() {
+            hideElement(introOverlay[i]);
+        })
+    }
+
     // show notes & hide form when user submits form
-    myForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        showElement(notesDisplay);
-        hideElement(myForm);
-        console.log('displaying notes');
-    });
+    // myForm.addEventListener('submit', function(event) {
+    //     event.preventDefault();
+    //     showElement(notesDisplay);
+    //     hideElement(myForm);
+    //     console.log('displaying notes');
+    // });
     
 
     // function hides element by changing class to 'hidden'

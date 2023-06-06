@@ -37,6 +37,7 @@
 <body>
     <!-- INTRODUCTION OVERLAYS -->
     <section class="intro showing" id="seal_intro">
+        <button class="exit">x</button>
         <h2>Welcome!</h2>
         <img src="images/seal_img.png" alt="image of Davis' Centennial Seal">
         <p>This is the Davis Centennial Seal made by local artist Susan Shelton.</p>
@@ -44,20 +45,26 @@
     </section>
 
     <section class="intro hidden" id="seal_location">
-        <div class="placeholder" id="location"></div>
+        <button class="exit">x</button>
+        <h2>Location</h2>
+        <img src="images/location.png" alt="location of the seal">
         <p>The 6.5-foot bronze seal is located by Mishka's Café and the Dresbach-Hunt-Boyer House in downtown Davis.</p>
         <button class="next">Next</button>
     </section>
 
     <section class="intro hidden" id="seal_slice">
-        <div class="placeholder" id="slice"></div>
+        <button class="exit">x</button>
+        <h2>University Panel</h2>
+        <img src="images/panel.png" alt="university panel of the seal">
         <p>A panel of the seal is dedicated to the university for its impact on the city.</p>
         <button class="next">Next</button>
     </section>
 
     <section class="intro hidden" id="seal_start">
+        <button class="exit">x</button>
+        <h2>University Students</h2>
         <div class="placeholder" id="location"></div>
-        <p>Continue to get a glimpse of what it's like living in Davis as a UC Davis student.</p>
+        <p>Living in Davis, students have experiences regarding symbols beyond just the university panel. Continue to get a glimpse of what it's like living in Davis as a UC Davis student.</p>
         <button class="next">Get Started</button>
     </section>
 
@@ -66,11 +73,11 @@
     <div class="showing" id="viewport"> <!--only visible portion (wrapper)-->
         <div id="fullview"> <!--full rectangle of scenes (all sections)-->
             <section class="section" id="screen0">
-                <img src="images/bike.png" id="bike" alt="bike graphic">
+                <!-- <img src="images/bike.png" id="bike" alt="bike graphic"> -->
                 <div class="content" id="intro">
                     <h1>Living the UC Davis Life</h1>
                     <p>scroll to begin</p>
-                    <button id="note">Davis is my Home because...</button>
+                    <button id="note">Davis<br> 🤍 <br>HoMe</button>
                 </div>
             </section>
             <section class="section" id="screen1">
@@ -90,7 +97,9 @@
             <section class="section" id="screen3">
                 <div class="content">
                     <img src="images/squirrel.png" class="item" id="squirrel" alt="squirrel graphic">
-                    <img src="images/ducks.png" class="item" id="ducks" alt="ducks graphic">
+                    <img src="images/duck.png" class="item" id="duck" alt="duck graphic">
+                    <img src="images/duckling1.png" class="item" id="duckling1" alt="duckling graphic">
+                    <img src="images/duckling2.png" class="item" id="duckling2" alt="duckling graphic">
                 </div> 
             </section>
 
@@ -122,39 +131,45 @@
             <section class="section" id="screen8">
                 <div class="content">
                     <button id="start_over">Start Over</button>
-                    <button id="note">Davis is my Home because...</button>
+                    <button id="note">Davis<br> 🤍 <br>HoMe</button>
                 </div> 
             </section>
-        </div> 
+        </div>
+        <img src="images/bike.png" id="bike" alt="bike graphic">
+ 
     </div>
     
     <!-- LEAVE A NOTE -->
-    <section class="hidden" id="form_screen">
-        <h1>Living the UC Davis Life</h1>
-        <form id="my_form">
-            <h2>Leave a Note</h2>
-            <p>Davis has become a home to many UC Davis students. As a student, describe how Davis has become a home to you. This can be a landmark you like, a routine, or a specific memory that pertains to your Davis experience.</p>
-            
-            <label for="description">Your Note:</label><br>
-            <input type="description" id="description" name="description" placeholder="Davis is a home to me because..."><br>          
-            
-            <p>I am a(n):</p>
-            <input type="radio" id="current" name="student_status" value="current">
-            <label for="current">current student</label><br>
-            <input type="radio" id="alumni" name="student_status" value="alumni">
-            <label for="alumni">alumni</label><br>
+    
+   
+    <form class="hidden" id="form_screen">
+        <h1>Living the UC Davis Life</h1>    
 
-            <label for="year">Grad Year:</label><br>
-            <input type="year" id="year" name="year" placeholder="2023"><br>
+        <h2>Leave a Note</h2>
+        <p>Davis has become a home to many UC Davis students. As a student, describe how Davis has become a home to you. This can be a landmark you like, a routine, or a specific memory that pertains to your Davis experience.</p>
+        
+        <label for="description">Your Note:</label><br>
+        <input type="description" id="description" name="description" placeholder="Davis is a home to me because..."><br>          
+        
+        <p>I am a(n):</p>
+        <input type="radio" id="current" name="student_status" value="current">
+        <label for="current">current student</label><br>
+        <input type="radio" id="alumni" name="student_status" value="alumni">
+        <label for="alumni">alumni</label><br>
 
-            <label for="name">Your Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="Johnny Appleseed">
+        <label for="year">Grad Year:</label><br>
+        <input type="year" id="year" name="year" placeholder="2023"><br>
 
-            <button><input type="submit" id="submit" value="Submit"></button>
-        </form>
-    </section>
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Johnny Appleseed">
+
+        <button><input type="submit" id="submit" value="Submit"></button>
+    </form>
 
     <section class="hidden" id="notes_display">
+        <h1>Living the UC Davis Life</h1>    
+        
+        <h2>Davis is my home because...</h2>
         <!-- display user input notes here -->
     </section>
     
