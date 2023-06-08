@@ -176,7 +176,7 @@
 
     // -- BUTTONS --
     const startOver = document.querySelector('#start_over');
-    const leaveNote = document.querySelectorAll('#note');
+    const leaveNote = document.querySelectorAll('.note');
     console.log(leaveNote);
     
     const parallax = document.querySelector('#viewport');
