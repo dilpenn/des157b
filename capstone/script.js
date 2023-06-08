@@ -48,7 +48,9 @@
     t1.from(item[11], 3, {left: 0}, 'sixth'); //doxie
 
     t1.to('#fullview', 2, {xPercent: -77.77});
-    t1.from(item[12], 3, {bottom: 0}, 'seventh'); //grad
+    t1.from(item[12], 3, {bottom: -15}, 'seventh'); //grad
+    t1.from(item[13], 4, {bottom: -5}, 'seventh'); //grad
+    t1.from(item[14], 5, {bottom: 0}, 'seventh'); //grad
 
     t1.to('#fullview', 2, {xPercent: -88.88});
     // t1.from(item[10], 1, {bottom: 0}, 'seventh'); 
@@ -80,6 +82,7 @@
 
     // -- BACK4APP --
     const notesDisplay = document.querySelector('#notes_display');
+    const notesGrid = document.querySelector('#notes_grid');
     const noteForm = document.querySelector('#form_screen');
     const inputs = document.querySelectorAll("#form_screen input:not([type=submit])");
 
@@ -108,7 +111,7 @@
                 <p class="name">-${name}</p> 
                 `;
 
-                notesDisplay.append(theNoteItem);
+                notesGrid.append(theNoteItem);
             });    
         
         } catch (error) {
@@ -139,10 +142,32 @@
             newNoteData.set('year', newNote.year);
             newNoteData.set('name', newNote.name);
 
+            try {
+                //add to database
+                const result = await newNoteData.save();
+                console.log('note created', result);
+                //clear and close form
+                resetFormFields();
+                hideElement(noteForm);
+                //update DOM
+                notesDisplay.innerHTML = '';
+                displayNotes();
+            } catch (error) {
+                console.error('Error while creating note', error);
+            }
+
         } else {
             hideElement(noteForm);
             showElement(notesDisplay);
         }
+    }
+
+    // function clears form
+    function resetFormFields() {
+        document.getElementById('description').value = '';
+        document.querySelector('input[name="student_status"]:checked').checked = false;
+        document.getElementById('year').value = '';
+        document.getElementById('name').value = '';
     }
 
     

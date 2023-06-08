@@ -1,0 +1,370 @@
+body {
+    font-family: 'Pangolin', cursive;
+}
+
+p {
+    font-size: 18px;
+}
+
+.intro {
+    position: absolute;
+    width: 65%;
+    height: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 1;
+    background-color: white;
+    border: solid black;
+    border-radius: 12px;
+    padding: 1%;
+    /* box-sizing: border-box; */
+}
+
+.placeholder {
+    background-color: gray;
+}
+
+#seal {
+    height: 150px;
+    width: 150px;
+    border-radius: 200px;
+}
+
+#location {
+    height: 120px;
+    width: 200px;
+}
+
+#slice {
+    height: 120px;
+    width: 75px;
+}
+
+#user_test ol {
+    text-align: left;
+}
+
+/* showing and hiding elements */
+.showing{
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* PARALLAX STYLING */
+#viewport {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: black; */
+    overflow: hidden;
+    /* position: relative; */
+}
+
+#fullview {
+    height: 100vh;
+    width: 900vw;
+    background-color: rgb(169, 223, 236);
+    /* position: relative; */
+}
+
+.section {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+#bike {
+    position: sticky;
+    bottom: 1%;
+    transform: translate(-50%, 0);
+    left: 50%;
+}
+
+#intro {
+    text-align: center;
+    margin-top: 20%;
+}
+
+#submit {
+    all: unset;
+}
+
+button {
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.exit {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-position: center;
+    float: right;
+}
+
+#note {
+    all: unset;
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 118px;
+    height: 109px;
+    padding-top: 10px;
+    background: url(images/home.png) no-repeat;
+    background-position: center;
+    font-size: 18px;
+    text-align: center;
+    display: grid; 
+    place-content: center;
+}
+
+#seal_button {
+    all: unset;
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 114px;
+    height: 114px;
+    background: url(images/seal_button.png) no-repeat;
+    background-position: center;
+    font-size: 18px;
+    text-align: center;
+    display: grid; 
+    place-content: center;
+}
+
+
+#screen1 {
+    background-color: rgb(137, 162, 137);
+    left: 100vw;
+}
+
+#screen2 {
+    background-color: rgb(123, 159, 160);
+    left: 200vw;
+}
+
+#screen3 {
+    background-color: rgb(123, 135, 160);
+    left: 300vw;
+}
+
+#screen4 {
+    background-color: rgb(123, 125, 160);
+    left: 400vw;
+}
+
+#screen5 {
+    background-color: rgb(146, 123, 160);
+    left: 500vw;
+}
+
+#screen6 {
+    background-color: rgb(160, 123, 157);
+    left: 600vw;
+}
+
+#screen7 {
+    background-color: rgb(108, 137, 195);
+    left: 700vw;
+}
+#screen8 {
+    background-color: rgb(160, 123, 123);
+    left: 800vw;
+}
+
+#start_over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.foreground {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.item {
+    position: absolute;
+}
+
+/* values are END positions (start value in JS */
+#dorm {
+    top: 15%;
+    right: 90%;
+}
+
+#turkey {
+    bottom: 30%;
+    left: 100%;
+}
+
+#egghead {
+    top: 1%;
+    right: 100%;
+}
+
+#unitrans {
+    bottom: 10%;
+    left: 100%;
+}
+
+#squirrel {
+    bottom: 30%;
+    right: 110%;
+}
+
+#duck {
+    bottom: 30%;
+    right: 72%;
+}
+
+#duckling1 {
+    bottom: 30%;
+    right: 65%;
+}
+
+#duckling2 {
+    bottom: 30%;
+    right: 60%;
+}
+
+#cow {
+    bottom: 60%;
+    right: 70%;
+}
+
+#tractor {
+    bottom: 20%;
+    left: 100%;
+}
+
+#farmers_market {
+    top: 10%;
+    right: 90%;
+}
+
+#doxie {
+    bottom: 40%;
+    right: -10%;
+}
+
+#grad1 {
+    bottom: 90%;
+    right: 40%;
+}
+
+#grad2 {
+    bottom: 90%;
+    right: 10%;
+}
+
+#grad3 {
+    bottom: 90%;
+    right: 80%;
+}
+
+
+/* FORM STYLING */
+#form_screen {
+    position: absolute;
+    top: 0;
+    padding-top: 2%;
+    text-align: center;
+}
+
+#form_box {
+    width: 60%;
+    border: solid black;
+    border-radius: 12px;
+    padding: 1%;
+    transform: translate(-50%, 0);
+    margin-left: 50%;
+}
+
+#form_inputs {
+    text-align: left;
+    padding: 1% 3%;
+    line-height: 1.5em;
+}
+
+#form_inputs label{
+    font-size: 18px;
+}
+
+#form_inputs input[type=text]{
+    width: 100%;
+}
+
+#form_inputs textarea {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+#form_inputs p {
+    margin: 0;
+}
+
+.input_area {
+    margin-top: 0.75em;
+}
+
+
+/* DATA DISPLAY STYLING */
+#notes_display {
+    position: absolute;
+    top: 0;
+    padding-top: 2%;
+    text-align: center;
+    width: 100%;
+}
+
+#notes_grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0;
+    /* place-items: center; */
+    justify-content: center;
+}
+
+.user_note {
+    background-color:antiquewhite;
+    width: 350px;
+    padding: 5px 15px;
+    margin: 8px;
+    text-align: left;
+}
+
+.user_note .status, .user_note .year {
+    line-height: 0.5em;
+    font-size: 14px;
+    padding-left: 12px;
+}
+
+
+footer {
+    position: sticky;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}

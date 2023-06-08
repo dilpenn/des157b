@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- normalize -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    
+    <!-- ScrollMagic Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Connect ScrollMagic to GSAP animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js" integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ScrollMagic Indicators (for debugging) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js" integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Parse Library  -->
+    <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+
+    <!-- Google Fonts: Pangolin (400) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+
+    <!-- stylesheet -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- script -->
+    <script src="script.js" defer></script>
+
+    <title>Capstone: User Test</title>
+</head>
+
+<body>
+    <!-- INTRODUCTION OVERLAYS -->
+    <section class="intro showing" id="seal_intro">
+        <button class="exit">x</button>
+        <h2>Welcome!</h2>
+        <img src="images/seal_img.png" alt="image of Davis' Centennial Seal">
+        <p>This is the Davis Centennial Seal made by local artist Susan Shelton.</p>
+        <button class="next">Next</button>
+    </section>
+
+    <section class="intro hidden" id="seal_location">
+        <button class="exit">x</button>
+        <h2>Location</h2>
+        <img src="images/location.png" alt="location of the seal">
+        <p>The 6.5-foot bronze seal is located by Mishka's Café and the Dresbach-Hunt-Boyer House in downtown Davis.</p>
+        <button class="next">Next</button>
+    </section>
+
+    <section class="intro hidden" id="seal_slice">
+        <button class="exit">x</button>
+        <h2>University Panel</h2>
+        <img src="images/panel.png" alt="university panel of the seal">
+        <p>A panel of the seal is dedicated to the university for its impact on the city.</p>
+        <button class="next">Next</button>
+    </section>
+
+    <section class="intro hidden" id="seal_start">
+        <button class="exit">x</button>
+        <h2>University Students</h2>
+        <img src="images/seal_elements.png" alt="university panel of the seal with illustrations">
+        <p>Living in Davis, students have experiences regarding symbols beyond just the university panel. Continue to get a glimpse of what it's like living in Davis as a UC Davis student.</p>
+        <button class="next">Get Started</button>
+    </section>
+
+
+    <!-- PARALLAX -->
+    <div class="showing" id="viewport"> <!--only visible portion (wrapper)-->
+        <div id="fullview"> <!--full rectangle of scenes (all sections)-->
+            <section class="section" id="screen0">
+                <!-- <img src="images/bike.png" id="bike" alt="bike graphic"> -->
+                <div class="content" id="intro">
+                    <h1>Living the UC Davis Life</h1>
+                    <p>scroll to begin</p>
+                    <button id="seal_button">Seal</button>
+                    <button id="note">Davis<br> 🤍 <br>HoMe</button>
+                </div>
+            </section>
+            <section class="section" id="screen1">
+                <div class="content">
+                    <img src="images/dorm.png" class="item" id="dorm" alt="dorm graphic">
+                    <img src="images/turkey.png" class="item" id="turkey" alt="turkey graphic">
+                    <img src="images/tercero.png" class="foreground" id="tercero" alt="bush and tercero sign graphic">
+                </div>
+            </section>
+
+            <section class="section" id="screen2">
+                <div class="content">
+                    <img src="images/egghead.png" class="item" id="egghead" alt="egghead graphic">
+                    <img src="images/unitrans.png" class="item" id="unitrans" alt="unitrans graphic">
+                </div> 
+            </section>
+
+            <section class="section" id="screen3">
+                <div class="content">
+                    <img src="images/squirrel.png" class="item" id="squirrel" alt="squirrel graphic">
+                    <img src="images/duck.png" class="item" id="duck" alt="duck graphic">
+                    <img src="images/duckling1.png" class="item" id="duckling1" alt="duckling graphic">
+                    <img src="images/duckling2.png" class="item" id="duckling2" alt="duckling graphic">
+                </div> 
+            </section>
+
+            <section class="section" id="screen4">
+                <div class="content">
+                    <img src="images/cow.png" class="item" id="cow" alt="cow graphic">
+                    <img src="images/tractor.png" class="item" id="tractor" alt="tractor graphic">
+                </div> 
+            </section>
+           
+            <section class="section" id="screen5">
+                <div class="content">
+                    <img src="images/farmersmarket.png" class="item" id="farmers_market" alt="farmers market graphic">
+                </div> 
+            </section>
+
+            <section class="section" id="screen6">
+                <div class="content">
+                    <img src="images/doxie.png" class="item" id="doxie" alt="doxie derby graphic">
+                </div> 
+            </section>
+
+            <section class="section" id="screen7">
+                <div class="content">
+                    <img src="images/grad_l.png" class="item" id="grad1" alt="graduation graphic">
+                    <img src="images/grad_m.png" class="item" id="grad2" alt="graduation graphic">
+                    <img src="images/grad_s.png" class="item" id="grad3" alt="graduation graphic">
+                </div> 
+            </section>
+
+            <section class="section" id="screen8">
+                <div class="content">
+                    <button id="start_over">Start Over</button>
+                    <button id="note">Davis<br> 🤍 <br>HoMe</button>
+                </div> 
+            </section>
+        </div>
+        <img src="images/bike.png" id="bike" alt="bike graphic">
+ 
+    </div>
+    
+
+    <!-- LEAVE A NOTE -->
+    <form class="hidden" id="form_screen">
+        <h1>Living the UC Davis Life</h1>    
+        <div id="form_box">
+            <h2>Leave a Note</h2>
+            <p>Davis has become a home to many UC Davis students. As a student, describe how Davis has become a home to you. This can be a landmark you like, a routine, or a specific memory that pertains to your Davis experience.</p>
+            
+            <div id="form_inputs">
+                <div class="input_area">
+                    <label for="description">Your Note:</label><br>
+                    <textarea type="text" id="description" name="description" placeholder="Davis is a home to me because..."></textarea><br>
+                </div>
+                          
+                <div class="input_area">
+                    <p>I am a(n):</p>
+                    <input type="radio" id="current" name="student_status" value="current">
+                    <label for="current">current student</label><br>
+                    <input type="radio" id="alumni" name="student_status" value="alumni">
+                    <label for="alumni">alumni</label><br>
+                </div>
+
+                <div class="input_area">
+                    <label for="year">Grad Year:</label><br>
+                    <input type="text" id="year" name="year" placeholder="2023"><br>
+                </div>
+
+                <div class="input_area">
+                    <label for="name">Your Name:</label><br>
+                    <input type="text" id="name" name="name" placeholder="Johnny Appleseed"><br>
+                </div>
+                
+            </div>
+            
+            <div class="input_area">
+                <button><input type="submit" id="submit" value="Submit"></button>
+            </div>
+            
+        </div>
+        
+    </form>
+
+    <section class="hidden" id="notes_display">
+        <h1>Living the UC Davis Life</h1>    
+        
+        <h2>Davis is my home because...</h2>
+        <div id="notes_grid">
+            <!-- display user input notes here -->
+        </div>
+        
+    </section>
+    
+
+    <!-- <footer>
+        <p>Libraries: <a href="http://scrollmagic.io/">ScrollMagic</a> | <a href="https://greensock.com/">GSAP</a></p>
+    </footer> -->
+</body>
+</html>
