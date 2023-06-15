@@ -50,12 +50,13 @@
     t1.from(item[15], 6, {left: 350}, 'fifth'); //farmers market
 
     t1.to('#fullview', 2, {xPercent: -66.66});
-    t1.from(item[16], 3, {left: 0}, 'sixth'); //doxie
+    t1.from(item[16], 3, {left: 0}, 'sixth'); //doxie1
+    t1.from(item[17], 4, {left: 0}, 'sixth'); //doxie2
 
     t1.to('#fullview', 2, {xPercent: -77.77});
-    t1.from(item[17], 3, {bottom: -15}, 'seventh'); //grad
-    t1.from(item[18], 4, {bottom: -5}, 'seventh'); //grad
-    t1.from(item[19], 5, {bottom: 0}, 'seventh'); //grad
+    t1.from(item[18], 3, {bottom: -15}, 'seventh'); //grad
+    t1.from(item[19], 4, {bottom: -5}, 'seventh'); //grad
+    t1.from(item[20], 5, {bottom: 0}, 'seventh'); //grad
 
     t1.to('#fullview', 2, {xPercent: -88.88});
     // t1.from(item[10], 1, {bottom: 0}, 'seventh'); 

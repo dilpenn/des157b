@@ -173,7 +173,7 @@ button, #submit {
 }
 
 #screen4 {
-    background-color: rgb(162, 162, 168);
+    background-color: rgb(145, 145, 145);
     left: 400vw;
 }
 
@@ -187,7 +187,10 @@ button, #submit {
 }
 
 #screen6 {
-    background-color: rgb(160, 123, 157);
+    background-image: url('images/doxie_sign.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: rgb(150, 138, 163);
     left: 600vw;
 }
 
@@ -311,8 +314,13 @@ button, #submit {
     left: 0;
 }
 
-#doxie {
+#doxie1 {
     bottom: 40%;
+    right: -10%;
+}
+
+#doxie2 {
+    bottom: 34%;
     right: -10%;
 }
 
