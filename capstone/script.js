@@ -247,14 +247,14 @@
         hideElement(introOverlay[3]);
     });
 
-    // go to previous overlay when '<' clicked
-    // for (let j=0; j < introOverlay.length; j++) {
-    //     back[j].addEventListener('mousedown', function() {
-    //         hideElement(introOverlay[j+1]);
-    //         showElement(introOverlay[j]);
-    //         console.log(back[j]);
-    //     })
-    // }
+    // go to previous overlay when '<-' clicked
+    for (let i=0; i < introOverlay.length-1; i++) {
+        back[i].addEventListener('mousedown', function() {
+            hideElement(introOverlay[i+1]);
+            showElement(introOverlay[i]);
+            console.log(back[i]);
+        })
+    }
 
     // close overlay that exit button corresponds to
     for (let i=0; i < introOverlay.length; i++) {
