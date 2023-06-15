@@ -185,7 +185,7 @@
     // -- BUTTONS --
     const startOver = document.querySelector('#start_over');
     const leaveNote = document.querySelectorAll('.note');
-    
+    const skip = document.querySelector('#skip');
     
     const parallax = document.querySelector('#viewport');
     
@@ -199,8 +199,8 @@
     const exit = document.querySelectorAll('.exit');
 
     const myForm = document.querySelector('#my_form');
-    // const submit = document.querySelector('#submit');
-    
+
+    const journeyButton = document.querySelectorAll('.journey_btn');
 
     // when "Start Over" is clicked, scroll back to the beginning
     startOver.addEventListener('mousedown', scrollToTop);
@@ -264,14 +264,25 @@
         })
     }
 
-    // show notes & hide form when user submits form
-    // myForm.addEventListener('submit', function(event) {
-    //     event.preventDefault();
-    //     showElement(notesDisplay);
-    //     hideElement(myForm);
-    //     console.log('displaying notes');
-    // });
+    // close form when 'skip' pressed
+    skip.addEventListener('mousedown', function() {
+        hideElement(noteForm);
+        showElement(notesDisplay);
+    })
     
+    // when "journey" is clicked, open parallax journey
+    journeyButton[0].addEventListener('mousedown', function() {
+        showElement(parallax);
+        hideElement(noteForm);
+        hideElement(notesDisplay);
+        scrollToTop();
+    });
+
+    journeyButton[1].addEventListener('mousedown', function() {
+        showElement(parallax);
+        hideElement(notesDisplay);
+        scrollToTop();
+    });
 
     // function hides element by changing class to 'hidden'
     function hideElement(element) {
