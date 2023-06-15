@@ -1,5 +1,7 @@
 body {
     font-family: 'Pangolin', cursive;
+    /* box-sizing: border-box; */
+    overflow-x: hidden;
 }
 
 p {
@@ -19,27 +21,25 @@ p {
     border: solid black;
     border-radius: 12px;
     padding: 1%;
+    display: flex;
+    justify-content: center;
     /* box-sizing: border-box; */
 }
 
-.placeholder {
-    background-color: gray;
+.intro_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;  /* same size as parent box */
 }
 
-#seal {
-    height: 150px;
-    width: 150px;
-    border-radius: 200px;
+.intro_content img {
+    align-self: center;
 }
 
-#location {
-    height: 120px;
-    width: 200px;
-}
-
-#slice {
-    height: 120px;
-    width: 75px;
+.intro_content p {
+    max-width: 70%;
 }
 
 #user_test ol {
@@ -80,7 +80,7 @@ p {
 
 #bike {
     position: sticky;
-    bottom: 1%;
+    bottom: 0;
     transform: translate(-50%, 0);
     left: 50%;
 }
@@ -99,6 +99,19 @@ button, #submit {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+}
+
+.back {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-position: center;
+    color: black;
+    font-weight: bold;
+    background: none;
+    float: left;
 }
 
 .exit {
@@ -145,27 +158,31 @@ button, #submit {
 
 
 #screen1 {
-    background-color: rgb(137, 162, 137);
+    background-color: rgb(160, 195, 160);
     left: 100vw;
 }
 
 #screen2 {
-    background-color: rgb(123, 159, 160);
+    background-color: rgb(179, 186, 186);
     left: 200vw;
 }
 
 #screen3 {
-    background-color: rgb(123, 135, 160);
+    background-color: rgb(120, 194, 231);
     left: 300vw;
 }
 
 #screen4 {
-    background-color: rgb(123, 125, 160);
+    background-color: rgb(162, 162, 168);
     left: 400vw;
 }
 
 #screen5 {
-    background-color: rgb(146, 123, 160);
+    background-image: url('images/ground.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 45%;
+    background-color: rgb(149, 210, 235);
     left: 500vw;
 }
 
@@ -179,7 +196,7 @@ button, #submit {
     left: 700vw;
 }
 #screen8 {
-    background-color: rgb(160, 123, 123);
+    background-color: rgb(169, 223, 236);
     left: 800vw;
 }
 
@@ -191,11 +208,7 @@ button, #submit {
 
 }
 
-.foreground {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
+
 
 .item {
     position: absolute;
@@ -203,23 +216,46 @@ button, #submit {
 
 /* values are END positions (start value in JS */
 #dorm {
-    top: 15%;
-    right: 90%;
+    width: 110%;
+    top: 8%;
+    right: 0;
 }
 
 #turkey {
-    bottom: 30%;
+    bottom: 28%;
     left: 100%;
 }
 
+#tercero {
+    width: 130%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#mrak {
+    filter: blur(5px);
+    width: 110%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 #egghead {
-    top: 1%;
-    right: 100%;
+    top: 4%;
+    right: 45%;
 }
 
 #unitrans {
     bottom: 10%;
     left: 100%;
+}
+
+#arb {
+    width: 108%;
+    position: absolute;
+    bottom: -5%;
+    right: 0;
 }
 
 #squirrel {
@@ -242,9 +278,23 @@ button, #submit {
     right: 60%;
 }
 
+#hay {
+    width: 110%;
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+}
+
 #cow {
     bottom: 60%;
     right: 70%;
+}
+
+#fence {
+    width: 110%;
+    position: absolute;
+    bottom: 57%;
+    right: 0;
 }
 
 #tractor {
@@ -253,8 +303,9 @@ button, #submit {
 }
 
 #farmers_market {
-    top: 10%;
-    right: 90%;
+    width: 82%;
+    top: 2%;
+    left: 0;
 }
 
 #doxie {
@@ -287,10 +338,11 @@ button, #submit {
 }
 
 #form_box {
+    box-sizing: border-box;
     width: 60%;
     border: solid black;
     border-radius: 12px;
-    padding: 1%;
+    padding: 1% 5%;
     transform: translate(-50%, 0);
     margin-left: 50%;
 }

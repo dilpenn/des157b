@@ -24,33 +24,38 @@
     // timeline sequence
 
     t1.to('#fullview', 2, {xPercent: -11.11}); //to(selector, animation duration in sec., {animation property})
-    t1.from(item[0], 4, {right: 0}, 'first'); //dorm
-    t1.from(item[1], 2, {left: 0}, 'first'); //turkey
+    t1.from(item[0], 6, {left: 0}, 'first'); //dorm
+    t1.from(item[1], 4, {left: 0}, 'first'); //turkey
+    t1.from(item[2], 4, {left: 0}, 'first'); //tercero
 
     t1.to('#fullview', 2, {xPercent: -22.22}); 
-    t1.from(item[2], 4, {right: -20}, 'second'); //egghead
-    t1.from(item[3], 2, {left: -30}, 'second'); //unitrans
+    t1.from(item[3], 4, {left: 0}, 'second'); //mrak
+    t1.from(item[4], 4, {right: 200}, 'second'); //egghead
+    t1.from(item[5], 2, {left: -30}, 'second'); //unitrans
 
     t1.to('#fullview', 2, {xPercent: -33.33}); 
-    t1.from(item[4], 3, {right: 200}, 'third'); //squirrel
-    t1.from(item[5], 5, {right: 40}, 'third'); //duck
-    t1.from(item[6], 6, {right: 20}, 'third'); //duckling1
-    t1.from(item[7], 7, {right: 0}, 'third'); //duckling2
+    t1.from(item[6], 4, {left: 0}, 'third'); //arboretum
+    t1.from(item[7], 3, {right: 200}, 'third'); //squirrel
+    t1.from(item[8], 5, {right: 40}, 'third'); //duck
+    t1.from(item[9], 6, {right: 20}, 'third'); //duckling1
+    t1.from(item[10], 7, {right: 0}, 'third'); //duckling2
 
     t1.to('#fullview', 2, {xPercent: -44.44}); 
-    t1.from(item[8], 5, {right: 0}, 'fourth'); //cow
-    t1.from(item[9], 3, {left: -10}, 'fourth'); //tractor
+    t1.from(item[11], 4, {left: 0}, 'fourth'); //hay
+    t1.from(item[12], 5, {right: 0}, 'fourth'); //cow
+    t1.from(item[13], 4, {left: 0}, 'fourth'); //fence
+    t1.from(item[14], 3, {left: -10}, 'fourth'); //tractor
 
     t1.to('#fullview', 2, {xPercent: -55.55}); 
-    t1.from(item[10], 4, {right: 0}, 'fifth'); //farmers market
+    t1.from(item[15], 6, {left: 350}, 'fifth'); //farmers market
 
     t1.to('#fullview', 2, {xPercent: -66.66});
-    t1.from(item[11], 3, {left: 0}, 'sixth'); //doxie
+    t1.from(item[16], 3, {left: 0}, 'sixth'); //doxie
 
     t1.to('#fullview', 2, {xPercent: -77.77});
-    t1.from(item[12], 3, {bottom: -15}, 'seventh'); //grad
-    t1.from(item[13], 4, {bottom: -5}, 'seventh'); //grad
-    t1.from(item[14], 5, {bottom: 0}, 'seventh'); //grad
+    t1.from(item[17], 3, {bottom: -15}, 'seventh'); //grad
+    t1.from(item[18], 4, {bottom: -5}, 'seventh'); //grad
+    t1.from(item[19], 5, {bottom: 0}, 'seventh'); //grad
 
     t1.to('#fullview', 2, {xPercent: -88.88});
     // t1.from(item[10], 1, {bottom: 0}, 'seventh'); 
@@ -84,7 +89,7 @@
     const notesDisplay = document.querySelector('#notes_display');
     const notesGrid = document.querySelector('#notes_grid');
     const noteForm = document.querySelector('#form_screen');
-    const inputs = document.querySelectorAll("#form_screen input:not([type=submit])");
+    const inputs = document.querySelectorAll("#form_screen input:not([type=submit]), #form_screen textarea");
 
     async function displayNotes() {
         const notes = Parse.Object.extend('Notes');
@@ -135,10 +140,12 @@
         }
         console.log(newNote);
         
-        if(newNote.description != "" && newNote.status != "" && newNote.year != "" && newNote.name != "") {
+        const status = document.querySelector('input[name="student_status"]:checked');
+
+        if(newNote.description != "" && status != "" && newNote.year != "" && newNote.name != "") {
             const newNoteData = new Parse.Object('Notes');
             newNoteData.set('description', newNote.description);
-            newNoteData.set('status', newNote.status);
+            newNoteData.set('status', status.value);
             newNoteData.set('year', newNote.year);
             newNoteData.set('name', newNote.name);
 
@@ -149,6 +156,7 @@
                 //clear and close form
                 resetFormFields();
                 hideElement(noteForm);
+                showElement(notesDisplay);
                 //update DOM
                 notesDisplay.innerHTML = '';
                 displayNotes();
@@ -177,15 +185,17 @@
     // -- BUTTONS --
     const startOver = document.querySelector('#start_over');
     const leaveNote = document.querySelectorAll('.note');
-    console.log(leaveNote);
+    
     
     const parallax = document.querySelector('#viewport');
     
     const closeOverlay = document.querySelector('#continue');
     const userTest = document.querySelector('#user_test');
-
-    const nextButton = document.querySelectorAll('.next');
+    
+    const sealButton = document.querySelector('#seal_button'); 
     const introOverlay = document.querySelectorAll('.intro');
+    const nextButton = document.querySelectorAll('.next');
+    const back = document.querySelectorAll('.back');
     const exit = document.querySelectorAll('.exit');
 
     const myForm = document.querySelector('#my_form');
@@ -200,7 +210,7 @@
         console.log('to top');
     };
 
-    // when "Davis is my Home bc..." is clicked, show form and hide parallax interface
+    // when "Davis HoME" is clicked, show form and hide parallax interface
     leaveNote[0].addEventListener('mousedown', function() {
         hideElement(parallax);
         showElement(noteForm);
@@ -212,11 +222,15 @@
         scrollToTop();
     });
 
-    
+    // when "Seal" is clicked, show intro overlay
+    sealButton.addEventListener('mousedown', function() {
+        showElement(introOverlay[0]);
+    });
+
     // when "next" is clicked, open next overlay
     nextButton[0].addEventListener('mousedown', function() {
-            hideElement(introOverlay[0]);
-            showElement(introOverlay[1]);
+        hideElement(introOverlay[0]);
+        showElement(introOverlay[1]);
     });
 
     nextButton[1].addEventListener('mousedown', function() {
@@ -233,14 +247,20 @@
         hideElement(introOverlay[3]);
     });
 
-    // for (let i=1; i < introOverlay.length; i++) {
-
+    // go to previous overlay when '<' clicked
+    // for (let j=0; j < introOverlay.length; j++) {
+    //     back[j].addEventListener('mousedown', function() {
+    //         hideElement(introOverlay[j+1]);
+    //         showElement(introOverlay[j]);
+    //         console.log(back[j]);
+    //     })
     // }
 
     // close overlay that exit button corresponds to
     for (let i=0; i < introOverlay.length; i++) {
         exit[i].addEventListener('mousedown', function() {
             hideElement(introOverlay[i]);
+            console.log[exit[i]];
         })
     }
 

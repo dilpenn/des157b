@@ -38,34 +38,45 @@
     <!-- INTRODUCTION OVERLAYS -->
     <section class="intro showing" id="seal_intro">
         <button class="exit">x</button>
-        <h2>Welcome!</h2>
-        <img src="images/seal_img.png" alt="image of Davis' Centennial Seal">
-        <p>This is the Davis Centennial Seal made by local artist Susan Shelton.</p>
-        <button class="next">Next</button>
+        <div class="intro_content">
+            <h2>Welcome!</h2>
+            <img src="images/seal_img.png" alt="image of Davis' Centennial Seal">
+            <p>This is the Davis Centennial Seal made by local artist Susan Shelton.</p>
+            <button class="next">Next</button>
+        </div> 
     </section>
 
     <section class="intro hidden" id="seal_location">
+        <button class="back">&larr;</button>
         <button class="exit">x</button>
-        <h2>Location</h2>
-        <img src="images/location.png" alt="location of the seal">
-        <p>The 6.5-foot bronze seal is located by Mishka's Café and the Dresbach-Hunt-Boyer House in downtown Davis.</p>
-        <button class="next">Next</button>
+        <div class="intro_content">
+            <h2>Location</h2>
+            <img src="images/location.png" alt="location of the seal">
+            <p>The 6.5-foot bronze seal is located by Mishka's Café and the Dresbach-Hunt-Boyer House in downtown Davis.</p>
+            <button class="next">Next</button>
+        </div>
     </section>
 
     <section class="intro hidden" id="seal_slice">
+        <button class="back">&larr;</button>
         <button class="exit">x</button>
-        <h2>University Panel</h2>
-        <img src="images/panel.png" alt="university panel of the seal">
-        <p>A panel of the seal is dedicated to the university for its impact on the city.</p>
-        <button class="next">Next</button>
+        <div class="intro_content">
+            <h2>University Panel</h2>
+            <img src="images/panel.png" alt="university panel of the seal">
+            <p>A panel of the seal is dedicated to the university for its impact on the city.</p>
+            <button class="next">Next</button>    
+        </div>
     </section>
 
     <section class="intro hidden" id="seal_start">
+        <button class="back">&larr;</button>
         <button class="exit">x</button>
-        <h2>University Students</h2>
-        <img src="images/seal_elements.png" alt="university panel of the seal with illustrations">
-        <p>Living in Davis, students have experiences regarding symbols beyond just the university panel. Continue to get a glimpse of what it's like living in Davis as a UC Davis student.</p>
-        <button class="next">Get Started</button>
+        <div class="intro_content">
+            <h2>University Students</h2>
+            <img src="images/seal_elements.png" alt="university panel of the seal with illustrations">
+            <p>Living in Davis, students have experiences regarding symbols beyond just the university panel. Continue to get a glimpse of what it's like living in Davis as a UC Davis student.</p>
+            <button class="next">Get Started</button>    
+        </div>
     </section>
 
 
@@ -73,7 +84,6 @@
     <div class="showing" id="viewport"> <!--only visible portion (wrapper)-->
         <div id="fullview"> <!--full rectangle of scenes (all sections)-->
             <section class="section" id="screen0">
-                <!-- <img src="images/bike.png" id="bike" alt="bike graphic"> -->
                 <div class="content" id="intro">
                     <h1>Living the UC Davis Life</h1>
                     <p>scroll to begin</p>
@@ -85,12 +95,13 @@
                 <div class="content">
                     <img src="images/dorm.png" class="item" id="dorm" alt="dorm graphic">
                     <img src="images/turkey.png" class="item" id="turkey" alt="turkey graphic">
-                    <img src="images/tercero.png" class="foreground" id="tercero" alt="bush and tercero sign graphic">
+                    <img src="images/tercero.png" class="item" id="tercero" alt="bush and tercero sign graphic">
                 </div>
             </section>
 
             <section class="section" id="screen2">
                 <div class="content">
+                    <img src="images/mrak.png" class="item" id="mrak" alt="mrak hall graphic">
                     <img src="images/egghead.png" class="item" id="egghead" alt="egghead graphic">
                     <img src="images/unitrans.png" class="item" id="unitrans" alt="unitrans graphic">
                 </div> 
@@ -98,6 +109,7 @@
 
             <section class="section" id="screen3">
                 <div class="content">
+                    <img src="images/arb.png" class="item" id="arb" alt="arboretum graphic with bridge">
                     <img src="images/squirrel.png" class="item" id="squirrel" alt="squirrel graphic">
                     <img src="images/duck.png" class="item" id="duck" alt="duck graphic">
                     <img src="images/duckling1.png" class="item" id="duckling1" alt="duckling graphic">
@@ -107,7 +119,9 @@
 
             <section class="section" id="screen4">
                 <div class="content">
+                    <img src="images/hay.png" class="item" id="hay" alt="hay graphic">
                     <img src="images/cow.png" class="item" id="cow" alt="cow graphic">
+                    <img src="images/fence.png" class="item" id="fence" alt="fence graphic">
                     <img src="images/tractor.png" class="item" id="tractor" alt="tractor graphic">
                 </div> 
             </section>
